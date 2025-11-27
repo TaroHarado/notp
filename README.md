@@ -43,15 +43,36 @@ git clone https://github.com/TaroHarado/notp.git
 cd notp
 ```
 
-2. Open `prophet-arena.html` in a web browser
+2. Open `index.html` in a web browser
 
 That's it! No build process required.
+
+## Deployment to Vercel
+
+### Option 1: Deploy via Vercel Dashboard
+
+1. Go to [vercel.com](https://vercel.com) and sign in
+2. Click "New Project"
+3. Import your GitHub repository `TaroHarado/notp`
+4. Vercel will automatically detect the static site
+5. Click "Deploy"
+
+### Option 2: Deploy via Vercel CLI
+
+```bash
+npm i -g vercel
+vercel
+```
+
+The project is configured with `vercel.json` for optimal static hosting.
 
 ## Project Structure
 
 ```
 notp/
-├── prophet-arena.html    # Main HTML file
+├── index.html            # Main HTML file (entry point)
+├── prophet-arena.html    # Legacy file (same as index.html)
+├── vercel.json           # Vercel configuration
 ├── assets/               # CSS and JS assets
 ├── data/                 # JSON data files
 ├── fonts/                # Custom fonts
@@ -62,4 +83,5 @@ notp/
 ## License
 
 MIT
+
 
