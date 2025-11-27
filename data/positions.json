@@ -1,0 +1,97 @@
+{
+  "models": ["GPT", "Claude", "Grok", "DeepSeek", "Gemini"],
+  "positions": [
+    {
+      "model": "GPT",
+      "market": "Will bitcoin hit $1m before GTA VI?",
+      "ourSide": "Yes",
+      "ourAvg": 0.48,
+      "ourShares": 20,
+      "priceNow": 0.50,
+      "portfolioPct": 1.2,
+      "links": {
+        "modelWallet": "https://polymarket.com/address/0x...",
+        "ourWallet": "https://polymarket.com/address/0x...",
+        "marketUrl": "https://polymarket.com/event/bitcoin-1m-gta-vi"
+      }
+    },
+    {
+      "model": "GPT",
+      "market": "Will Stable launch a token in 2025?",
+      "ourSide": "Yes",
+      "ourAvg": 0.68,
+      "ourShares": 300,
+      "priceNow": 0.65,
+      "portfolioPct": 8.5,
+      "links": {
+        "modelWallet": "https://polymarket.com/address/0x...",
+        "ourWallet": "https://polymarket.com/address/0x...",
+        "marketUrl": "https://polymarket.com/event/stable-token-2025"
+      }
+    },
+    {
+      "model": "Claude",
+      "market": "Will BTC hit $100k by Dec 31 '25?",
+      "ourSide": "No",
+      "ourAvg": 0.49,
+      "ourShares": 900,
+      "priceNow": 0.52,
+      "portfolioPct": 12.3,
+      "links": {
+        "modelWallet": "https://polymarket.com/address/0x...",
+        "ourWallet": "https://polymarket.com/address/0x...",
+        "marketUrl": "https://polymarket.com/event/btc-100k-2025"
+      }
+    },
+    {
+      "model": "DeepSeek",
+      "market": "Will AI be TIME's Person of the Year for 2025?",
+      "ourSide": "No",
+      "ourAvg": 0.66,
+      "ourShares": 735,
+      "priceNow": 0.58,
+      "portfolioPct": 9.8,
+      "links": {
+        "modelWallet": "https://polymarket.com/address/0x...",
+        "ourWallet": "https://polymarket.com/address/0x...",
+        "marketUrl": "https://polymarket.com/event/ai-time-person-2025"
+      }
+    },
+    {
+      "model": "Grok",
+      "market": "Will China invade Taiwan before GTA VI?",
+      "ourSide": "Yes",
+      "ourAvg": 0.50,
+      "ourShares": 998,
+      "priceNow": 0.48,
+      "portfolioPct": 11.2,
+      "links": {
+        "modelWallet": "https://polymarket.com/address/0x...",
+        "ourWallet": "https://polymarket.com/address/0x...",
+        "marketUrl": "https://polymarket.com/event/china-taiwan-gta-vi"
+      }
+    },
+    {
+      "model": "Gemini",
+      "market": "Will Trump be Top-5 searched in 2025?",
+      "ourSide": "No",
+      "ourAvg": 0.62,
+      "ourShares": 5,
+      "priceNow": 0.55,
+      "portfolioPct": 0.3,
+      "links": {
+        "modelWallet": "https://polymarket.com/address/0x...",
+        "ourWallet": "https://polymarket.com/address/0x...",
+        "marketUrl": "https://polymarket.com/event/trump-top5-2025"
+      }
+    }
+  ],
+  "stats": {
+    "activeModels": 5,
+    "marketsFaded": 156,
+    "pnl3Day": 1247.50,
+    "winRate": 0.68,
+    "sharpe": 1.42
+  }
+}
+
