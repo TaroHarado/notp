@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <title>NotProphet — Anti-AI Prediction Arena</title>
+    <title>short42.fun — Anti-AI Prediction Arena</title>
     <meta name="description" content="We trade against AIs on Polymarket. Real capital, real PnL, fully verifiable." />
 
     <link rel="stylesheet" href="assets/index-2ba5cd4a.css">
@@ -21,6 +21,24 @@
         box-sizing: border-box;
       }
       
+      :root {
+        /* более яркий салатовый фон, текст — белый */
+        --bg-dark: #0c5a28;
+        --bg-darker: #06351a;
+        --neon-mint: #ffffff;
+        --neon-teal: #9dffb0;
+        --neon-purple: #9b59b6;
+        --neon-orange: #e77222;
+        /* заменили синий акцент на салатовый */
+        --neon-blue: #7ff0ac;
+        --neon-yellow: #ffeb3b;
+        --neon-white: #ffffff;
+        --grid-color: rgba(127, 240, 172, 0.1);
+        /* переопределяем синий из базовой темы на салатовый */
+        --sys-color-blue: #7ff0ac;
+        --sys-color-blue-rgb: 127, 240, 172;
+      }
+      
       body {
         margin: 0;
         padding: 0;
@@ -28,19 +46,7 @@
         font-smooth: always;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-      }
-      
-      :root {
-        --bg-dark: #0a0f2e;
-        --bg-darker: #050815;
-        --neon-mint: #7ff0ac;
-        --neon-teal: #00d9ff;
-        --neon-purple: #9b59b6;
-        --neon-orange: #e77222;
-        --neon-blue: #68d1ee;
-        --neon-yellow: #ffeb3b;
-        --neon-white: #ffffff;
-        --grid-color: rgba(127, 240, 172, 0.1);
+        background: var(--bg-dark);
       }
       
       #root {
@@ -159,20 +165,24 @@
       
       /* KPI Strip */
       .kpi-strip {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 0.8rem;
-        padding: 1rem 1.5rem;
-        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1rem auto;
+        max-width: 900px;
+        flex-wrap: wrap;
       }
       
       .kpi-card {
         background: rgba(10, 15, 46, 0.8);
         border: 1px solid var(--neon-mint);
-        padding: 0.8rem 0.6rem;
+        padding: 0.6rem 1rem;
         text-align: center;
         box-shadow: 0 0 10px rgba(127, 240, 172, 0.15);
         transition: all 0.3s;
+        min-width: 120px;
+        flex: 0 1 auto;
       }
       
       .kpi-card:hover {
@@ -182,17 +192,17 @@
       
       .kpi-label {
         font-family: AthensClassic, sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: var(--neon-mint);
         opacity: 0.8;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.25rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
       
       .kpi-value {
         font-family: Retron2000, sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: var(--neon-mint);
         font-weight: bold;
         text-shadow: 0 0 8px var(--neon-mint);
@@ -740,7 +750,7 @@
     <div id="root">
       <!-- Top Navigation -->
       <nav class="top-nav">
-        <a href="https://x.com/notprophet_fun" target="_blank" class="nav-link" rel="noopener noreferrer">
+        <a href="https://x.com/short42_fun" target="_blank" class="nav-link" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
@@ -756,7 +766,7 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="container">
-          <h1 class="hero-title">NotProphet</h1>
+          <h1 class="hero-title">short42.fun</h1>
           <p class="hero-subtitle">We trade against AIs on Polymarket</p>
           <div class="hero-cta">
             <a href="#dashboard" class="btn-primary">View Dashboard</a>
@@ -767,27 +777,25 @@
       
       <!-- KPI Strip -->
       <section class="kpi-strip">
-        <div class="container">
-          <div class="kpi-card">
-            <div class="kpi-label">Active Models</div>
-            <div class="kpi-value" id="kpi-models">5</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Markets Faded</div>
-            <div class="kpi-value" id="kpi-markets">156</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">3-Day PnL</div>
-            <div class="kpi-value" id="kpi-pnl">$1,247.50</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Win Rate</div>
-            <div class="kpi-value" id="kpi-winrate">68%</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Sharpe Ratio</div>
-            <div class="kpi-value" id="kpi-sharpe">1.42</div>
-          </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Active Models</div>
+          <div class="kpi-value" id="kpi-models">5</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Markets Faded</div>
+          <div class="kpi-value" id="kpi-markets">156</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">3-Day PnL</div>
+          <div class="kpi-value" id="kpi-pnl">$1,247.50</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Win Rate</div>
+          <div class="kpi-value" id="kpi-winrate">68%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Sharpe Ratio</div>
+          <div class="kpi-value" id="kpi-sharpe">1.42</div>
         </div>
       </section>
       
@@ -885,7 +893,7 @@
                 <span style="color: var(--neon-mint);">Claude</span>
               </div>
               <div class="legend-item" style="display: flex; align-items: center; gap: 0.5rem;">
-                <div style="width: 14px; height: 14px; border-radius: 50%; background: #68d1ee; box-shadow: 0 0 8px #68d1ee;"></div>
+                <div style="width: 14px; height: 14px; border-radius: 50%; background: #7ff0ac; box-shadow: 0 0 8px #7ff0ac;"></div>
                 <span style="color: var(--neon-mint);">DeepSeek</span>
               </div>
             </div>
@@ -967,7 +975,7 @@
           <div class="protocol-content">
             <h2>NP-Relay Protocol</h2>
             <p>
-              NP-Relay routes capital from the NotProphet treasury to fund inverse fills against tracked model orders.
+              NP-Relay routes capital from the short42.fun treasury to fund inverse fills against tracked model orders.
             </p>
             
             <h3>How It Works</h3>
