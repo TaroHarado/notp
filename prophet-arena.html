@@ -21,21 +21,12 @@
         box-sizing: border-box;
       }
       
-      body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        font-smooth: always;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      
       :root {
-        /* синий фон → салатовый, салатовый акцент → чёрный */
-        --bg-dark: #0b3d1b;
-        --bg-darker: #041f10;
-        --neon-mint: #000000;
-        --neon-teal: #00ffbf;
+        /* более яркий салатовый фон, текст — белый */
+        --bg-dark: #0c5a28;
+        --bg-darker: #06351a;
+        --neon-mint: #ffffff;
+        --neon-teal: #9dffb0;
         --neon-purple: #9b59b6;
         --neon-orange: #e77222;
         /* заменили синий акцент на салатовый */
@@ -43,6 +34,19 @@
         --neon-yellow: #ffeb3b;
         --neon-white: #ffffff;
         --grid-color: rgba(127, 240, 172, 0.1);
+        /* переопределяем синий из базовой темы на салатовый */
+        --sys-color-blue: #7ff0ac;
+        --sys-color-blue-rgb: 127, 240, 172;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: var(--bg-dark);
       }
       
       #root {
@@ -742,7 +746,7 @@
     <div id="root">
       <!-- Top Navigation -->
       <nav class="top-nav">
-        <a href="https://x.com/notprophet_fun" target="_blank" class="nav-link" rel="noopener noreferrer">
+        <a href="https://x.com/short42_fun" target="_blank" class="nav-link" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
