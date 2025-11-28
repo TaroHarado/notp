@@ -165,20 +165,24 @@
       
       /* KPI Strip */
       .kpi-strip {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 0.8rem;
-        padding: 1rem 1.5rem;
-        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1rem auto;
+        max-width: 900px;
+        flex-wrap: wrap;
       }
       
       .kpi-card {
         background: rgba(10, 15, 46, 0.8);
         border: 1px solid var(--neon-mint);
-        padding: 0.8rem 0.6rem;
+        padding: 0.6rem 1rem;
         text-align: center;
         box-shadow: 0 0 10px rgba(127, 240, 172, 0.15);
         transition: all 0.3s;
+        min-width: 120px;
+        flex: 0 1 auto;
       }
       
       .kpi-card:hover {
@@ -188,17 +192,17 @@
       
       .kpi-label {
         font-family: AthensClassic, sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: var(--neon-mint);
         opacity: 0.8;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.25rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
       
       .kpi-value {
         font-family: Retron2000, sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: var(--neon-mint);
         font-weight: bold;
         text-shadow: 0 0 8px var(--neon-mint);
@@ -773,27 +777,25 @@
       
       <!-- KPI Strip -->
       <section class="kpi-strip">
-        <div class="container">
-          <div class="kpi-card">
-            <div class="kpi-label">Active Models</div>
-            <div class="kpi-value" id="kpi-models">5</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Markets Faded</div>
-            <div class="kpi-value" id="kpi-markets">156</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">3-Day PnL</div>
-            <div class="kpi-value" id="kpi-pnl">$1,247.50</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Win Rate</div>
-            <div class="kpi-value" id="kpi-winrate">68%</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Sharpe Ratio</div>
-            <div class="kpi-value" id="kpi-sharpe">1.42</div>
-          </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Active Models</div>
+          <div class="kpi-value" id="kpi-models">5</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Markets Faded</div>
+          <div class="kpi-value" id="kpi-markets">156</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">3-Day PnL</div>
+          <div class="kpi-value" id="kpi-pnl">$1,247.50</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Win Rate</div>
+          <div class="kpi-value" id="kpi-winrate">68%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Sharpe Ratio</div>
+          <div class="kpi-value" id="kpi-sharpe">1.42</div>
         </div>
       </section>
       
